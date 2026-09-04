@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "tailwindcss -i ./css/input.css -o ./css/output.css --watch",
-    "build": "tailwindcss -i ./css/input.css -o ./css/output.css --minify"
+    "build": "mkdir -p public && tailwindcss -i ./css/input.css -o ./public/css/output.css --minify && cp index.html logo.svg public/ && cp -r js public/"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.19"
